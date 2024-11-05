@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio website of White Angel. A summary of professional experience, 
+      skills, projects details and contact information."
+    />
+    <title>White Angel</title>
+
+    <!--==================== OPEN GRAPH META TAGS ===================== -->
+    <meta property="og:title" content="White Angel" />
+    <meta property="og:image" content="/assets/img/PwaImages/ios/512.png" />
+    <meta
+      property="og:description"
+      content="Portfolio website of White Angel. A summary of professional experience, 
+      skills, projects details and contact information."
+    />
+
+    <!--==================== TWITTER META TAGS ===================== -->
+    <meta name="twitter:title" content="White Angel" />
+    <meta
+      name="twitter:description"
+      content="Portfolio website of White Angel. A summary of professional experience, 
+      skills, projects details and contact information."
+    />
+    <meta name="twitter:image" content="/assets/img/PwaImages/ios/512.png" />
+
+    <!--==================== UNICONS ====================-->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
+    <!-- ====================PWA================== -->
+    <link rel="manifest" href="manifest.json" />
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="./assets/img/PwaImages/ios/32.png" />
+    <link rel="apple-touch-icon" href="./assets/img/PwaImages/ios/72.png" />
+    <link rel="apple-touch-icon" href="./assets/img/PwaImages/ios/100.png" />
+    <link rel="apple-touch-icon" href="./assets/img/PwaImages/ios/128.png" />
+    <link rel="apple-touch-icon" href="./assets/img/PwaImages/ios/144.png" />
+    <link rel="apple-touch-icon" href="./assets/img/PwaImages/ios/152.png" />
+    <link rel="apple-touch-icon" href="./assets/img/PwaImages/ios/192.png" />
+    <link rel="apple-touch-icon" href="./assets/img/PwaImages/ios/256.png" />
+    <link rel="apple-touch-icon" href="./assets/img/PwaImages/ios/512.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="#6E57E0" />
+    <meta name="theme-color" content="#6E57E0" />
+
+    <!-- ============FAVICONS============== -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/img/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets//img/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/img/favicons/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/img/favicons/favicon.ico"
+    />
+
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+
+   <!DOCTYPE html>
+<html>
+<head>
+    <title>Parent Page</title>
+    <style>
+        /* Set the body and HTML height to 100% */
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Set the iframe dimensions and remove scrollbars */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            overflow: hidden;
+        }
+    </style>
+    <script>
+        // Set the iframe height received from the embedded website
+        function setIframeHeight(event) {
+            if (event.data && event.data.hasOwnProperty('iframeHeight')) {
+                var iframe = document.getElementById('embeddedWebsite');
+                iframe.style.height = event.data.iframeHeight + 'px';
+            }
+        }
+
+        // Listen for the postMessage event
+        window.addEventListener('message', setIframeHeight);
+    </script>
+</head>
+<body>
+    <!-- Use an iframe to embed the website -->
+    <iframe id="embeddedWebsite" src="https://dahatbank.com/whiteangel/" frameborder="0"></iframe>
+</body>
+</html>
